@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    padding: 50px;
+    column-gap: 20px;
+    justify-content: center;
+}
+
+.plan-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 10px;
+    width: 330px;
+    height: 440px;
+    padding: 34px 24px 27px;
+    background-color: #f8f8f8;
+}
+
+.plan-section__header {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.plan-section__price {
+    font-size: 60px;
+    line-height: 56px;
+    font-weight: 700;
+}
+
+.plan-section__features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 17px;
+    line-height: 24px;
+    row-gap: 12px;
+}
+
+.plan-section__get-stated {
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    background-color: white;
+    color: #5454D4;
+}
+
+.plan-section.active {
+    transform: scale(1.05);
+    background-color: #FF7143;
+    color: white;
+    box-shadow: 0px 32px 34px rgba(255, 112, 59, 0.317827);
+}
+
+.plan-section.active .plan-section__get-stated {
+    background: #9F3919;
+    color: white
+}

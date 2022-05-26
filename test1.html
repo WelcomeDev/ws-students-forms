@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/test1.css">
+</head>
+
+<body>
+</body>
+
+<script>
+    window.addEventListener('load', () => {
+        const products = [
+            {
+                title: 'Starter',
+                price: 'Free',
+                features: [
+                    '1 Website',
+                    '5 GB Hosting',
+                    'Limited support'
+                ]
+            },
+            {
+                title: 'Premium',
+                price: '$29',
+                features: [
+                    '10 Website',
+                    '15 GB Hosting',
+                    'Premium support'
+                ]
+            },
+            {
+                title: 'Enterprise',
+                price: '$49',
+                features: [
+                    'Unlimited Website',
+                    '50 GB Hosting',
+                    'Premium support'
+                ]
+            }
+        ]
+
+        let previousSelection = null;
+        function onSelect(selectedPlanEvent) {
+            const selectedPlan = selectedPlanEvent.target.parentNode;
+
+            if (previousSelection) previousSelection.classList.remove('active');
+            selectedPlan.classList.add('active');
+            previousSelection = selectedPlan;
+        }
+
+        products.forEach(product => {
+            const planSection = document.createElement('div');
+            planSection.classList.add('plan-section');
+
+            const heading = document.createElement('h3');
+            heading.innerText = product.title;
+            heading.classList.add('plan-section__header');
+            planSection.appendChild(heading);
+
+            const price = document.createElement('h3');
+            price.innerText = product.price;
+            price.classList.add('plan-section__price');
+            planSection.appendChild(price);
+
+            const features = document.createElement('div');
+            features.classList.add('plan-section__features');
+            product.features.forEach(feature => {
+                const featureElement = document.createElement('p');
+                featureElement.innerText = feature;
+                features.appendChild(featureElement);
+            });
+            planSection.appendChild(features);
+
+            const getStartedButton = document.createElement('button');
+            getStartedButton.innerText = "Get Started";
+            getStartedButton.classList.add('plan-section__get-stated');
+            getStartedButton.onclick = onSelect;
+            planSection.appendChild(getStartedButton);
+
+            document.body.appendChild(planSection);
+        })
+    })
+</script>
+
+</html>

@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "first-name": "Дарья",
+      "last-name": "Медсестричкина",
+      "phone": "+79241111111",
+      "email": "f.ishchenko@white-soft.ru",
+      "language": "js",
+      "majority": "be",
+      "comment": "Что-то активено рассказываю о себе",
+      "id": 1
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+.my-button {
+    width: 150px;
+    height: 46px;
+    border-radius: 10px;
+    border: 1px solid darkblue;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.my-button .my-button__option {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-button input {
+    display: none;
+}
+
+input:checked+.my-button__option {
+    background-color: blue;
+    color: white;
+}
