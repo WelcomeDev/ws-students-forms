@@ -1,84 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link href="css/index.css" rel="stylesheet">
-    <script src="js/validate.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/send-data.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <!-- <link href="css/index.css" rel="stylesheet"> -->
+        <link href="css/validation.css" rel="stylesheet">
+        <script src="js/validate.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/send-data.js"></script>
+    </head>
 
-<body>
-    <form class="flex-column" id="applicant-form" name="applicantForm" action="#">
-        <h2>Applicant info</h2>
-        <label>
-            First name:
-            <input value="Fedor" name="first-name" required>
-        </label>
-        <label for="lastName">
-            Last name:
-            <input id="lastName" name="last-name" pattern="^[А-Я][а-я]{2,}$">
-        </label>
-        <label for="lastName">
-            Age:
-            <input name="age" type="number" min="0" max="99">
-        </label>
-        <label for="phone">Phone:</label>
-        <input id="phone" placeholder="Телефон" name="phone" type="tel">
-        <label for="email">Email:</label>
-        <input id="email"placeholder="Почта" name="email" type="email">
-        <select multiple name="city">
-            <option value="khv">Khavarovsk</option>
-            <option value="msk">Moskow</option>
-            <option selected value="novosib">Novosibirsk</option>
-        </select>
-        <div class="flex-row">
-            <fieldset class="flex-column">
-                <legend>Skills</legend>
-                <!--с бека обычно приходит enum, в котором указаны значения VALUE-->
-                <label>
-                    <input name="language" value="js" type="checkbox">
-                    JS
-                </label>
-                <label>
-                    <input name="language" value="csharp" type="checkbox">
-                    C#
-                </label>
-                <label>
-                    <input name="language" value="java" type="checkbox">
-                    Java
-                </label>
-                <label>
-                    <input name="language" value="ts" type="checkbox">
-                    Type Script
-                </label>
-            </fieldset>
-            <fieldset name="Majority" class="flex-column">
-                <legend>Majority</legend>
-                <label>
-                    <input name="majority" value="fe" type="radio" checked required>
-                    Frontend
-                </label>
-                <label>
-                    <input name="majority" value="be" type="radio" required>
-                    Backend
-                </label>
-                <label>
-                    <input name="majority" value="pm" type="radio" required>
-                    Product manager
-                </label>
-            </fieldset>
-        </div>
-        <label for="comment">Tell us about yourself!</label>
-        <textarea id="comment" name="comment"></textarea>
-        <p id="comment-words-counter"></p>
-        <p id="sended-data"></p>
-        <button id="applicantFormSubmit" class="submit">
-            Sumbit
-        </button>
-    </form>
-</body>
+    <body>
+        <form class="flex-column" id="applicant-form" name="applicantForm" action="#">
+            <h2>Applicant info</h2>
+            <label>
+                First name:
+                <input value="Fedor" name="first-name" required>
+            </label>
+            <label for="lastName">
+                Last name:
+                <input id="lastName" name="last-name" pattern="^[А-Я][а-я]{2,}$">
+            </label>
+            <label for="lastName">
+                Age:
+                <input name="age" type="number" min="0" max="99">
+            </label>
+            <label for="phone">Phone:</label>
+            <input id="phone" placeholder="Телефон" name="phone" type="tel">
+            <label for="email">Email:</label>
+            <input id="email" placeholder="Почта" name="email" type="email">
+            <select multiple name="city">
+                <option value="khv">Khavarovsk</option>
+                <option value="msk">Moskow</option>
+                <option selected value="novosib">Novosibirsk</option>
+            </select>
+            <div class="flex-row">
+                <fieldset class="flex-column">
+                    <legend>Skills</legend>
+                    <!--с бека обычно приходит enum, в котором указаны значения VALUE-->
+                    <label>
+                        <input name="language" value="js" type="checkbox">
+                        JS
+                    </label>
+                    <label>
+                        <input name="language" value="csharp" type="checkbox">
+                        C#
+                    </label>
+                    <label>
+                        <input name="language" value="java" type="checkbox">
+                        Java
+                    </label>
+                    <label>
+                        <input name="language" value="ts" type="checkbox">
+                        Type Script
+                    </label>
+                </fieldset>
+                <fieldset name="Majority" class="flex-column">
+                    <legend>Majority</legend>
+                    <label>
+                        <input name="majority" value="fe" type="radio" checked required>
+                        Frontend
+                    </label>
+                    <label>
+                        <input name="majority" value="be" type="radio" required>
+                        Backend
+                    </label>
+                    <label>
+                        <input name="majority" value="pm" type="radio" required>
+                        Product manager
+                    </label>
+                </fieldset>
+            </div>
+            <label for="comment">Tell us about yourself!</label>
+            <textarea id="comment" name="comment"></textarea>
+            <p id="comment-words-counter"></p>
+            <p id="sended-data"></p>
+            <button id="applicantFormSubmit" class="submit">
+                Sumbit
+            </button>
+        </form>
+    </body>
 
 </html>
