@@ -22,7 +22,7 @@ window.addEventListener('load', () => {
         }
         // if (!!input.validity.valid) input.setCustomValidity("")
         // else if (input.required && !input.value) input.setCustomValidity('REQUIRED FIELD')
-        // else if (input['pattern'] && !input.value.matches(input['pattern'])) input.setCustomValidity("INVALID PATTERN")
+        // else if (input['pattern'] && !input.value.match(input['pattern'])) input.setCustomValidity("INVALID PATTERN")
     }
 
     inputs.forEach(input => input.addEventListener('blur', validate));
