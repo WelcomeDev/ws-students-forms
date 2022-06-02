@@ -49,15 +49,12 @@ window.addEventListener('load', () => {
         // "хитрая" проверка валидации - сработает тот case который удовлетворяет условие первым
         switch (true) {
             case isEmpty:
-                console.log(input.name, ' is required');
                 createError('This field is required');
                 break;
             case invalidData:
-                console.log('invalid pattern ', input.name);
                 createError(input.getAttribute(VALIDATION_MESSAGE_ATTRIBUTE));
                 break;
             default:
-                console.log('on remove error');
                 inputErorr?.remove();
                 errors[input.name] = null;
                 break;

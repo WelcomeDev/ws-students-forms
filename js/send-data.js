@@ -18,8 +18,8 @@ async function useFetch(data) {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
-    })
-    console.log(response.json())
+    });
+    console.log(response.json());
 }
 
 function useXmlHttpRequest(data) {
@@ -28,9 +28,8 @@ function useXmlHttpRequest(data) {
     request.setRequestHeader("Content-Type", "application/json");
     request.send(JSON.stringify(data));
     request.onloadend = () => {
-        console.log('Succeed!')
-        console.log(request.response)
-    }
+        console.log(request.response);
+    };
 }
 
 window.addEventListener('load', () => {
@@ -42,7 +41,7 @@ window.addEventListener('load', () => {
 
         document.getElementById('sended-data').innerText = JSON.stringify(data);
         useXmlHttpRequest(data);
-    })
+    });
     const applicantFormSubmit = document.getElementById('applicantFormSubmit');
 
     // applicantFormSubmit.addEventListener('click', () => {
