@@ -1,5 +1,5 @@
 const requiredFields = ['phone', 'last-name', 'first-name', 'email'];
-const PHONE_PATTERN = /^\+7\(\d{3}\)\d{3}-\d{2}\d{2}$/;
+const PHONE_PATTERN = /^\+7\(\d{3}\)\d{3}-\d{2}-\d{2}$/;
 const NAME_PATTERN = /^[А-Яа-я]{2,}$/;
 const patternsFields = {
     'last-name': {

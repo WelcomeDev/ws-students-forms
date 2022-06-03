@@ -1,13 +1,13 @@
 function getFormData(form) {
     const formData = new FormData(form);
 
-    const res = {
-    };
-
-    Array.from(formData.keys()).forEach(key => {
-        res[key] = formData.get(key);
-    });
-
+    const res = Object.fromEntries(formData);
+    // or
+    // Array.from(formData.keys()).forEach(key => {
+    //     res[key] = formData.getAll(key);
+    // мой косяк был, что написал **get**, а не **getAll**
+    // });
+    console.log(res);
     return res;
 }
 
