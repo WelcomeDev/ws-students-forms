@@ -1,0 +1,10 @@
+#applicant-form .input-error {
+    color: red;
+    font-size: 12px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
